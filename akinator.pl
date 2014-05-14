@@ -23,11 +23,11 @@ estudante(leandro,m,preto,medio,castanho,media,software,8).
 professor(nome,sexo,cor_cabelo,tamanho_cabelo,cor_olho,estatura,curso,materia_principal,mestrado,doutorado).
 
 professor(milene,  f,loiro,   longo,castanho,baixa,paradigmas_de_programacao,software,mestrado,doutorado).
-professor(mauricio,m,preto,   medio,castanho,media,eda_2,                    software,mestrado,doutorado).
-professor(sergio,  m,grizalho,medio,castanho,alta, fac,						 software,mestrado,doutorado).
-professor(hilmer,  m,preto,   longo,castanho,media,mds,						 software,mestrado,doutorado).
-professor(rejane,  f,loiro,   longo,verde,   alta, pds, 					 software,mestrado,doutorado).
-professor(edson,   m,preto,   medio,castanho,alta, jogos,					 software,mestrado,doutorado).
+professor(mauricio,m,preto,   medio,castanho,media,eda_2,                    software,ciencia_computacao,ciencia_computacao).
+professor(sergio,  m,grizalho,medio,castanho,alta, fac,						 software,computacao,engenharia_eletrica).
+professor(hilmer,  m,preto,   longo,castanho,media,mds,						 software,ciencia_computacao,nao).
+professor(rejane,  f,loiro,   longo,verde,   alta, pds, 					 software,matematica_computacional/ciencia_computacao,engenharia_mecanica).
+professor(edson,   m,preto,   medio,castanho,alta, jogos,					 software,matematica,engenharia_eletrica).
 
 sexo(victor,m).
 sexo(joao,m).
