@@ -12,10 +12,10 @@ hipotese(rejane)	:- rejane, !.
 hipotese(carla)		:- carla, !.
 
 hipotese(mauricio)	:- mauricio, !.
-hipotese(sergio)	:- sergio, !.
+hipotese(sergio_freitas)	:- sergio_freitas, !.
+hipotese(hilmer)	:- hilmer, !.
+hipotese(edson)		:- edson, !.
 
-/*hipotese(hilmer)	:- hilmer, !.
-hipotese(edson)		:- sergio, !.*/
 hipotese(nao_encontrado).
 
 /* regras de identificacao de cada professor */
@@ -24,43 +24,77 @@ milene :- mulher,
 		  software,
 		  loiro,
 		  cabelo_longo,
-		  verify(estatura_baixa).
+		  estatura_baixa,
+		  verify(ministra_paradigmas_de_programacao).
+
 rejane :- mulher,
 		  software,
 		  loiro,
 		  cabelo_longo,
-		  verify(estatura_alta).
+		  estatura_alta,
+		  verify(mestrado_matematica_computacional),
+		  verify(doutorado_engenharia_mecanica),
+		  verify(ministra_pds).
+
 carla  :- mulher,
 		  software,
 		  loiro,
 		  cabelo_medio,
-		  verify(estatura_media).
+		  estatura_media,
+		  verify(mestrado),
+		  verify(doutorado).
+
 
 
 mauricio :- homem,
 			software,
-			verify(cabelo_preto),
-			verify(cabelo_medio),
-			verify(estatura_media).
+			preto,
+			cabelo_medio,
+			estatura_media,
+			verify(mestrado_ciencia_computacao),
+			verify(ministra_eda2).
+
 sergio_freitas :- homem,
 		  software,
 		  grisalho,
 		  cabelo_medio,
-		  verify(estatura_alta).
+		  estatura_alta,
+		  verify(mestrado_computacao),
+		  verify(doutorado_engenharia_eletrica),
+		  verify(ministra_fac).
+
+hilmer :- homem,
+		  software,
+		  preto,
+		  cabelo_longo,
+		  estatura_media,
+		  verify(mestrado_ciencia_computacao),
+		  verify(ministra_mds).
+
+edson :- homem,
+		  software,
+		  preto,
+		  cabelo_medio,
+		  estatura_alta,
+		  verify(mestrado_matematica),
+		  verify(doutorado_engenharia_eletrica),
+		  verify(ministra_jogos).
 
 
 /* regras de classificação */
 
 mulher	:- verify(e_mulher), !.
 homem	:- verify(e_homem), !.
-software :- verify(e_do_curso_de_software).
-loiro   :- verify(cabelo_loiro).
-preto 	:- verify(cabelo_preto).
-grisalho :- verify(cabelo_grisalho).
-cabelo_longo :- verify(cabelo_longo). /* pode ter um e o outro n */
-cabelo_medio :- verify(cabelo_medio).
-cabelo_curto :- verify(cabelo_curto).
-				  
+software :- verify(docente_do_curso_de_software).
+loiro   :- verify(tem_cabelo_loiro).
+preto 	:- verify(tem_cabelo_preto).
+grisalho :- verify(tem_cabelo_grisalho).
+cabelo_longo :- verify(tem_cabelo_longo). /* pode ter um e o outro n */
+cabelo_medio :- verify(tem_cabelo_medio).
+cabelo_curto :- verify(tem_cabelo_curto).
+estatura_baixa :- verify(estatura_baixa).
+estatura_media :- verify(estatura_media).
+estatura_alta  :- verify(estatura_alta).				  
 
 
 
