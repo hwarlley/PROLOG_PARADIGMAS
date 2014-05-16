@@ -46,11 +46,13 @@ carla  :- mulher,
 		  verify(doutorado),
 		  verify(ministra_icg).
 
-edna :- mulher, 
-		  sofware,
+edna   :- mulher, 
+		  software,
 		  loiro,
 		  cabelo_medio,
 		  estatura_baixa,
+		  verify(mestrado_sistemas_software),
+		  verify(doutorado_engenharia_eletrica),
 		  verify(ministra_sbd).
 
 mauricio :- homem,
