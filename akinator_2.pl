@@ -26,16 +26,16 @@ milene :- mulher,
 		  loiro,
 		  cabelo_longo,
 		  estatura_baixa,
-		  verify(ministra_paradigmas_de_programacao).
+		  verify('ministra paradigmas de programacao'). /*Com espaco, so funciona com aspas simples - string*/
 
 rejane :- mulher,
 		  software,
 		  loiro,
 		  cabelo_longo,
 		  estatura_alta,
-		  verify(mestrado_matematica_computacional),
-		  verify(doutorado_engenharia_mecanica),
-		  verify(ministra_pds).
+		  verify('mestrado matematica computacional'),
+		  verify('doutorado engenharia mecanica'),
+		  verify('ministra pds').
 
 carla  :- mulher,
 		  software,
@@ -92,8 +92,8 @@ edson :- homem,
 
 /* regras de classificação */
 
-mulher	:- verify(e_mulher), !.
-homem	:- verify(e_homem), !.
+mulher	:- verify('e mulher'), !.
+homem	:- verify('e homem'), !.
 software :- verify(docente_do_curso_de_software).
 loiro   :- verify(tem_cabelo_loiro).
 preto 	:- verify(tem_cabelo_preto).
