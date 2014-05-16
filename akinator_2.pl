@@ -49,7 +49,7 @@ carla  :- mulher,
 edna :- mulher, 
 		  sofware,
 		  loiro,
-		  cabelo_longo,
+		  cabelo_medio,
 		  estatura_baixa,
 		  verify(ministra_sbd).
 
