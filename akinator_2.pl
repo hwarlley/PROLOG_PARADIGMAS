@@ -123,6 +123,6 @@ verify(X) :-
 	 ask(X))).
 
 /* limpar os asserts */
-undo :- retract(yes(_)), fail.
+undo :- retract(sim(_)), fail.
 undo :- retract(nao(_)), fail.
 undo.
