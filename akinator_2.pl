@@ -10,6 +10,7 @@ deducao :- hipotese(Professor),
 hipotese(milene)	:- milene, !.
 hipotese(rejane)	:- rejane, !.
 hipotese(carla)		:- carla, !.
+hipotese(edna)		:- edna, !.
 
 hipotese(mauricio)	:- mauricio, !.
 hipotese(sergio_freitas)	:- sergio_freitas, !.
@@ -42,9 +43,15 @@ carla  :- mulher,
 		  cabelo_medio,
 		  estatura_media,
 		  verify(mestrado),
-		  verify(doutorado).
+		  verify(doutorado),
+		  verify(ministra_icg).
 
-
+edna :- mulher, 
+		  sofware,
+		  loiro,
+		  cabelo_longo,
+		  estatura_baixa,
+		  verify(ministra_sbd).
 
 mauricio :- homem,
 			software,
