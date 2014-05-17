@@ -8,11 +8,17 @@ deducao :- hipotese(Professor),
 
 /* hipoteses */
 hipotese(milene)	:- milene, !.
+hipotese(elaine)	:- elaine, !.
 hipotese(rejane)	:- rejane, !.
 hipotese(carla)		:- carla, !.
 hipotese(edna)		:- edna, !.
 hipotese(fabiana)	:- fabiana, !.
 
+hipotese(edgard)	:- edgard, !.
+hipotese(andre_lanna)	:- andre_lanna, !.
+hipotese(andre_barros)	:- andre_barros, !.
+hipotese(fabricio_braz)	:- fabricio_braz, !.
+hipotese(luiz_laranjeira)	:- luiz_laranjeira, !.
 hipotese(mauricio)	:- mauricio, !.
 hipotese(sergio_freitas)	:- sergio_freitas, !.
 hipotese(hilmer)	:- hilmer, !.
@@ -38,6 +44,14 @@ rejane :- mulher,
 		  verify('possui doutorado em engenharia mecanica'),
 		  verify('ministra pds').
 
+elaine :- mulher,
+		  software,
+		  loiro,
+		  cabelo_longo,
+		  estatura_alta,
+		  verify('possui mestrado em ciencia da computacao pela UFSC'),
+		  verify('ministra verival').
+
 carla  :- mulher,
 		  software,
 		  loiro,
@@ -56,19 +70,66 @@ edna   :- mulher,
 		  verify('possui doutorado em engenharia eletrica'),
 		  verify('ministra sbd').
 
+fabiana  :- mulher, 
+		  	software,
+		  	preto,
+		  	cabelo_longo,
+		  	estatura_baixa,
+		  	verify('possui mestrado em ciencia computacao pela UFG'),
+		  	verify('ministra gcs').
+
+edgard :- homem,
+			software,
+			preto,
+			cabelo_medio,
+			estatura_alta,
+			verify('possui mestrado ciencia computacao pela UNB'),
+			verify('ministra pi1').
+
+andre_lanna :- homem,
+			software,
+			loiro,
+			cabelo_curto,
+			estatura_alta,
+			verify('possui mestrado em engenharia eletrica pela PUC - MG'),
+			verify('ministrava das').
+
+andre_barros :- homem,
+			software,
+			preto,
+			cabelo_curto,
+			estatura_alta,
+			verify('possui mestrado em ciencia computacao pela UFSC'),
+			verify('ministra ihc').
+
+fabricio_braz :- homem,
+			software,
+			preto,
+			cabelo_curto,
+			estatura_baixa,
+			verify('possui doutorado em engenharia eletrica'),
+			verify('ministra das').
 
 mauricio :- homem,
 			software,
 			preto,
-			cabelo_medio,
+			cabelo_curto,
 			estatura_media,
 			verify('possui mestrado em ciencia computacao'),
 			verify('ministra eda2').
 
+luiz_laranjeira :- homem,
+		  software,
+		  grisalho,
+		  cabelo_curto,
+		  estatura_alta,
+		  verify('possui doutorado em engenharia da computacao - Texas'),
+		  verify('ministra sistemas criticos').
+
 sergio_freitas :- homem,
 		  software,
 		  grisalho,
-		  cabelo_medio,
+		  cabelo_curto,
 		  estatura_alta,
 		  verify('possui mestrado em computacao'),
 		  verify('possui doutorado em engenharia eletrica'),
@@ -85,7 +146,7 @@ hilmer :- homem,
 edson :- homem,
 		  software,
 		  preto,
-		  cabelo_medio,
+		  cabelo_curto,
 		  estatura_alta,
 		  verify('possui mestrado em matematica'),
 		  verify('possui doutorado em engenharia eletrica'),
