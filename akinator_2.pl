@@ -190,7 +190,7 @@ software :- verify('docente do curso de software').
 loiro   :- verify('tem cabelo loiro').
 preto 	:- verify('tem cabelo preto').
 grisalho :- verify('tem cabelo grisalho').
-cabelo_longo :- verify('tem cabelo longo'). /* pode ter um e o outro n */
+cabelo_longo :- verify('tem cabelo longo').
 cabelo_medio :- verify('tem cabelo medio').
 cabelo_curto :- verify('tem cabelo curto').
 estatura_baixa :- verify('estatura baixa').
