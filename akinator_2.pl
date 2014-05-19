@@ -1,28 +1,32 @@
 
-deducao :- hipotese(Professor),
+deducao :- hipotese(Professor, Professor_img),
 		write('Acho que o(a) professor(a) eh: '),
 		write(Professor),
 		nl,
-		undo.
+		undo,
+		shell(Professor_img).
 
 
 /* hipoteses */
-hipotese(milene)	:- milene, !.
-hipotese(elaine)	:- elaine, !.
-hipotese(rejane)	:- rejane, !.
-hipotese(carla)		:- carla, !.
-hipotese(edna)		:- edna, !.
-hipotese(fabiana)	:- fabiana, !.
+hipotese(milene, 'xdg-open milene.jpg')	:- milene, !.
+hipotese(elaine, 'xdg-open elaine.jpg')	:- elaine, !.
+hipotese(rejane, 'xdg-open rejane.jpg')	:- rejane, !.
+hipotese(carla, 'xdg-open carla.jpg')		:- carla, !.
+hipotese(edna, 'xdg-open edna.jpg')		:- edna, !.
+hipotese(fabiana, 'xdg-open fabiana.jpg')	:- fabiana, !.
 
-hipotese(edgard)	:- edgard, !.
-hipotese(andre_lanna)	:- andre_lanna, !.
-hipotese(andre_barros)	:- andre_barros, !.
-hipotese(fabricio_braz)	:- fabricio_braz, !.
-hipotese(luiz_laranjeira)	:- luiz_laranjeira, !.
-hipotese(mauricio)	:- mauricio, !.
-hipotese(sergio_freitas)	:- sergio_freitas, !.
-hipotese(hilmer)	:- hilmer, !.
-hipotese(edson)		:- edson, !.
+hipotese(edgard, 'xdg-open edgard.jpg')	:- edgard, !.
+hipotese(andre_lanna, 'xdg-open andre_lanna.jpg')	:- andre_lanna, !.
+hipotese(andre_barros, 'xdg-open andre_barros.jpg')	:- andre_barros, !.
+hipotese(fabricio_braz, 'xdg-open fabricio_braz.jpg')	:- fabricio_braz, !.
+hipotese(luiz_laranjeira, 'xdg-open luiz_laranjeira.jpg')	:- luiz_laranjeira, !.
+hipotese(mauricio, 'xdg-open mauricio.jpg')	:- mauricio, !.
+hipotese(sergio_freitas, 'xdg-open sergio_freitas.jpg')	:- sergio_freitas, !.
+hipotese(hilmer, 'xdg-open hilmer.jpg')	:- hilmer, !.
+hipotese(edson, 'xdg-open edson.jpg')		:- edson, !.
+hipotese(george, 'xdg-open george.jpg')		:- george, !.
+hipotese(paulo, 'xdg-open paulo.jpg')		:- paulo, !.
+hipotese(ricardo_ajax, 'xdg-open ricardo_ajax.jpg')		:- ricardo_ajax, !.
 
 hipotese(nao_encontrado).
 
@@ -78,6 +82,15 @@ fabiana  :- mulher,
 			verify('Possui mestrado em Ciencia da Computacao pela UFG'),
 			verify('Ministra Gerencia de Configuracao de Software').
 
+paulo :- homem,
+			software,
+			preto,
+			cabelo_curto,
+			estatura_media,
+			verify('Possui mestrado pela USP'),
+			verify('Ministra MES').
+
+
 edgard :- homem,
 			software,
 			preto,
@@ -93,6 +106,14 @@ andre_lanna :- homem,
 			estatura_alta,
 			verify('Possui mestrado em Engenharia Eletrica pela PUC-MG'),
 			verify('Ministrava Desenvolvimento Avancado de Software').
+
+george :- homem,
+			software,
+			preto,
+			cabelo_curto,
+			estatura_baixa,
+			verify('Possui mestrado em Gestao do Conhecimento e da Tecnologia da Informacao MGCTI (UCB)'),
+			verify('Ministra Requisitos').
 
 andre_barros :- homem,
 			software,
@@ -152,6 +173,14 @@ edson :- homem,
 		  verify('Possui doutorado em Engenharia Eletrica'),
 		  verify('Ministra Introducao aos Jogos Eletronicos').
 
+ricardo_ajax :- homem,
+		  software,
+		  preto,
+		  cabelo_curto,
+		  estatura_alta,
+		  verify('Possui Mestrado em Gestao do Conhecimento e da Tecnologia da Informacao- UcB'),
+		  verify('Ministrava TMES e VERIVAL').
+
 
 /* regras de classificação */
 
@@ -172,7 +201,7 @@ estatura_alta  :- verify('estatura alta').
 
 /* perguntas */
 ask(Pergunta) :-
-	write('O professor tem a seguinte caracteristica: '),
+	write('O professor(a) tem a seguinte caracteristica: '),
 	write(Pergunta),
 	write('? '),
 	read(Resposta),
